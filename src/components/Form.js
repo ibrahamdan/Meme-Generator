@@ -10,7 +10,6 @@ export default function Form(props) {
                 [name]: value
             }
         ))
-        console.log(props.formData)
     }
 
     function handleClick(event) {

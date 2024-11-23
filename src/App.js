@@ -36,16 +36,6 @@ function App() {
         ))
     }
 
-    
-
-    function logMeme() {
-        console.log(randomMeme)
-    }
-
-    function dispForm() {
-        console.log(formData)
-    }
-
     return (
         <div>
             <Navbar />
@@ -57,8 +47,6 @@ function App() {
             <Meme 
                 formData={formData}
             />
-            <button onClick={logMeme}>LOG</button>
-            <button onClick={dispForm}>Display Form</button>
         </div>
     );
 
