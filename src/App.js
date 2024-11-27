@@ -36,11 +36,28 @@ function App() {
         ))
     }
 
+    const getUploadedMeme = (event) => {
+        const file = event.target.files[0]
+        if (file) {
+            const reader = new FileReader()
+            reader.onload = (e) => {
+                setFormData(prevForm => (
+                    {
+                        ...prevForm,
+                        meme: e.target.result
+                    }
+                ))
+            }
+            reader.readAsDataURL(file)
+        }
+    }
+
     return (
         <div>
             <Navbar />
             <Form 
-                getMeme={getRandomMeme}
+                getRandomMeme={getRandomMeme}
+                getUploadedMeme={getUploadedMeme}
                 formData={formData}
                 setFormData={setFormData}
             />

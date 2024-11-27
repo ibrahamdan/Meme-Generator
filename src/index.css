@@ -54,14 +54,14 @@ code {
     font-family: "Karla", sans-serif;
 }
 
-.generate-btn {
+.btn {
     background: linear-gradient(90deg, #711F8D 1.14%, #A818DA 100%);
     border: none;
     border-radius: 5px;
     padding: 15px;
     color: #ffffff;
     font-weight: bold;
-    grid-column: 1 / -1;
+    grid-column: 1 / 0;
     cursor: pointer;
     font-family: "Karla", sans-serif;
 }
@@ -71,7 +71,7 @@ code {
 }
 
 .meme-container {
-    padding-inline: 25px;
+    margin-inline: 25px;
     display: flex;
     justify-content: center;
     position: relative;
@@ -79,7 +79,6 @@ code {
 
 .meme {
     width: 100%;
-    border-radius: 5px;
 }
 
 .meme--text {
@@ -113,4 +112,13 @@ code {
 
 .bottom {
     bottom: 0;
+}
+
+.upload-input {
+    display: none;
+}
+
+.download-btn {
+    display: block;
+    margin: 25px auto 25px auto;
 }

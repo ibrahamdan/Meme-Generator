@@ -2,6 +2,8 @@ import React from "react";
 
 export default function Form(props) {
 
+    const fileInputRef = React.useRef(null);
+
     function handleChange(event) {
         const {name, value} = event.target
         props.setFormData(prevForm => (
@@ -12,10 +14,17 @@ export default function Form(props) {
         ))
     }
 
-    function handleClick(event) {
+    function handleUploadBtn(event) {
         event.preventDefault()
-        props.getMeme()
+        fileInputRef.current.click()
     }
+
+    function handleClick(event) {
+        event.preventDefault()        
+        props.getRandomMeme()
+    }
+
+
 
     return (
         <form className="form">
@@ -45,9 +54,13 @@ export default function Form(props) {
                     value={props.formData.bottomText}
                 ></input>
             </span>
-            <button className="generate-btn" onClick={handleClick}>
+            <button className="btn generate-btn" onClick={handleClick}>
                 Generate Meme
             </button>
+            <button className="btn upload-btn" onClick={handleUploadBtn}>
+                Upload Meme
+            </button>
+            <input className="upload-input" type="file" accept="image/*" ref={fileInputRef} onChange={props.getUploadedMeme} />
         </form>
     );
 }
