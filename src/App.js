@@ -4,8 +4,6 @@ import "./App.css";
 import Meme from "./components/Meme";
 import React from "react";
 
-
-
 function App() {
 
     const [memesArray, setMemesArray] = React.useState([])
@@ -66,17 +64,6 @@ function App() {
             />
         </div>
     );
-
-    /*const [show, setShow] = React.useState(true)
-
-    return (
-        <div className="container">
-            <button onClick={() => {setShow(prevShow => !prevShow)}}>
-                Toggle WindowTracker
-            </button>
-            {show && <WindowTracker />}
-        </div>
-    )*/
 }
 
 export default App;

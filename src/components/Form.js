@@ -24,8 +24,6 @@ export default function Form(props) {
         props.getRandomMeme()
     }
 
-
-
     return (
         <form className="form">
             <span className="section">
